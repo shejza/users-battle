@@ -15,10 +15,12 @@ import SearchBox from "./common/search";
 class Movies extends Component {
   state = {
     movies: [],
+    genres: [],
     currentPage: 1,
     pageSize: 4,
-    genres: [],
-    sortColumn: {path: 'title', order: 'asc'}
+    searchQuery:"",
+    selectedGenre: null,
+    sortColumn: {path: 'title', order: 'asc'},
   };
 
   componentDidMount() {
@@ -46,7 +48,10 @@ class Movies extends Component {
   };
 
   handleFlterChange = (genre) => {
-    this.setState({selectedGenre: genre, currentPage: 1})
+    this.setState({selectedGenre: genre, searchQuery:"", currentPage: 1})
+  };
+  handleSearch = query => {
+    this.setState({searchQuery:query, selectedGenre:null, currentPage:1});
   };
 
   handleSort = (sortColumn) => {
@@ -59,10 +64,18 @@ class Movies extends Component {
       currentPage,
       sortColumn,
       selectedGenre,
+      searchQuery,
       movies: allMovies
     } = this.state;
 
-    const filtered = selectedGenre && selectedGenre._id ? allMovies.filter(m => m.genre._id === selectedGenre._id) : allMovies;
+    let filtered = allMovies;
+    if(searchQuery)
+     filtered =
+       allMovies.filter(m => m.title.toLowerCase().startsWith(searchQuery.toLowerCase())
+       ) ;
+       else if (
+         selectedGenre && selectedGenre._id ? allMovies.filter(m => m.genre._id === selectedGenre._id) : allMovies
+  );
 
     const sorted = _.orderBy(filtered, [sortColumn.path], [sortColumn.order]);
     const movies = paginate(sorted, currentPage, pageSize);
@@ -70,36 +83,7 @@ class Movies extends Component {
     return {totalCount: filtered.length, data: movies};
   };
 
-  handleSearch = (e) => {
-    // const target = props.target.value;
-    // const searched = this.state.movies.filter(m => m.title === target);
-    let currentList = [];
-    let newList = [];
 
-    if (e.target.value !== "") {
-      currentList = this.state.movies;
-
-      newList = currentList.filter(item => {
-        // change current item to lowercase
-        const lc = item.title.toString().toLowerCase();
-        // change search term to lowercase
-
-        const filter = e.target.value.toString().toLowerCase();
-
-        return lc.includes(filter);
-      });
-    } else {
-
-      newList = this.state.movies;
-    }
-
-    this.setState({
-      movies: newList,
-
-    });
-
-
-  };
 
 
   render() {
@@ -108,7 +92,8 @@ class Movies extends Component {
     const {
       pageSize,
       currentPage,
-      sortColumn
+      sortColumn,
+      searchQuery
     } = this.state;
 
 
@@ -128,7 +113,7 @@ class Movies extends Component {
           <div className="col-md-8">
             <Link to="/movies/new"  className="btn btn-primary mb-4 mt-4">New Movie <span className="sr-only">(current)</span></Link>
             <p>Showing {totalCount} movies in the database</p>
-            <SearchBox onKeyDown={this.handleSearch}/>
+            <SearchBox value={searchQuery} onChange={this.handleSearch}/>
             <MoviesTable movies={movies}
                          onSort={this.handleSort}
                          onLike={this.handleLike}

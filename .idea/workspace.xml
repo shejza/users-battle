@@ -2,30 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d335a014-1364-4e3c-9ead-7323e5af3127" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Customer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Movies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Movies.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pagination.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Rentals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Rentals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/input.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/like.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/like.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/listGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/listGroup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/common/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/select.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/select.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/tableBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/tableBody.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/tableHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/tableHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/loginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loginForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/movieForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movieForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/moviesTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/moviesTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/registerForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registerForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/utils/paginate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/paginate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/notfound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/notfound.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,33 +20,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/common/search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="119">
+              <caret line="6" column="132" selection-start-line="6" selection-start-column="132" selection-end-line="6" selection-end-column="132" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Movies.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/npm-debug.log">
+        <entry file="file://$PROJECT_DIR$/src/components/Movies.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-471" />
+            <state relative-caret-position="713">
+              <caret line="95" column="17" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#835#931#0" />
+                <element signature="e#960#1189#0" />
+                <element signature="e#1223#1268#0" />
+                <element signature="e#1401#1438#0" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
@@ -146,8 +117,8 @@
         <option value="$PROJECT_DIR$/src/components/moviesForm.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/movieForm.js" />
-        <option value="$PROJECT_DIR$/src/components/common/search.js" />
         <option value="$PROJECT_DIR$/src/components/Movies.js" />
+        <option value="$PROJECT_DIR$/src/components/common/search.js" />
       </list>
     </option>
   </component>
@@ -157,10 +128,10 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="741" />
-    <option name="y" value="45" />
-    <option name="width" value="1587" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="361" />
+    <option name="y" value="643" />
+    <option name="width" value="1440" />
     <option name="height" value="810" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -171,6 +142,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -206,7 +178,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -282,17 +253,19 @@
       <workItem from="1554134903723" duration="7031000" />
       <workItem from="1554185388809" duration="490000" />
       <workItem from="1554231791423" duration="4133000" />
+      <workItem from="1554271747102" duration="27000" />
+      <workItem from="1554316248743" duration="4661000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97599000" />
+    <option name="totallyTimeSpent" value="102287000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18969555" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.023419203" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -548,29 +521,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/npm-debug.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/common/search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="119">
+          <caret line="6" column="132" selection-start-line="6" selection-start-column="132" selection-end-line="6" selection-end-column="132" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Movies.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+        <state relative-caret-position="713">
+          <caret line="95" column="17" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#835#931#0" />
+            <element signature="e#960#1189#0" />
+            <element signature="e#1223#1268#0" />
+            <element signature="e#1401#1438#0" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/npm-debug.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-471" />
       </provider>
     </entry>
   </component>
