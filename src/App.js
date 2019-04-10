@@ -9,6 +9,8 @@ import NotFound from "./notfound";
 import MovieForm from "./components/movieForm";
 import LoginForm from "./components/loginForm";
 import RegisterForm from "./components/registerForm";
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import MoviesForm from "./components/movieForm";
 
 class App extends Component {
@@ -16,6 +18,7 @@ class App extends Component {
     return (
       <main className="container">
         <Sidebar/>
+        <ToastContainer/>
         <Switch>
           <Route path="/register" component={RegisterForm}/>
           <Route path="/login" component={LoginForm}/>
