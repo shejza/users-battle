@@ -9,7 +9,7 @@ import LoginForm from "./loginForm";
 import RegisterForm from "./registerForm";
 
 
-const Sidebar = props => {
+const Sidebar = ({user}) => {
   return (<div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <a className="navbar-brand" href="#">Navbar</a>
@@ -25,15 +25,31 @@ const Sidebar = props => {
             <li className="nav-item">
               <Link to="/customers" component={Customers} className="nav-link">Customers</Link>
             </li>
+
             <li className="nav-item">
               <Link to="/rentals" component={Rentals} className="nav-link">Rentals</Link>
             </li>
+            {!user &&
+            <React.Fragment>
             <li className="nav-item">
               <Link to="/login" component={LoginForm} className="nav-link">Login</Link>
             </li>
             <li className="nav-item">
               <Link to="/register" component={RegisterForm} className="nav-link">Register</Link>
             </li>
+              </React.Fragment>
+            }
+            {user &&
+            <React.Fragment>
+
+              <li className="nav-item">
+                <Link to="/profile" component={LoginForm} className="nav-link">{user.name}</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/logout" component={RegisterForm} className="nav-link">Logout</Link>
+              </li>
+            </React.Fragment>
+            }
           </ul>
         </div>
       </nav>
