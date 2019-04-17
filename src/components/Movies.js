@@ -114,6 +114,7 @@ catch (ex) {
       searchQuery
     } = this.state;
 
+    const { user } = this.props;
 
     const {totalCount, data: movies} = this.getPagedData();
 
@@ -129,7 +130,16 @@ catch (ex) {
                        onFilterChange={this.handleFlterChange}/>
           </div>
           <div className="col-md-8">
-            <Link to="/movies/new"  className="btn btn-primary mb-4 mt-4">New Movie <span className="sr-only">(current)</span></Link>
+            {user && (
+              <Link
+                to="/movies/new"
+                className="btn btn-primary"
+                style={{ marginBottom: 20 }}
+              >
+                New Movie
+              </Link>
+            )}
+
             <p>Showing {totalCount} movies in the database</p>
             <SearchBox value={searchQuery} onChange={this.handleSearch}/>
             <MoviesTable movies={movies}

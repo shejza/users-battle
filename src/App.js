@@ -17,14 +17,16 @@ import Logout from "./components/logout";
 import auth from "./services/authService";
 
 class App extends Component {
-  state= {};
+  state = {};
 
   componentDidMount() {
-   const user = auth.getCurrentUser();
-this.setState({user});
+    const user = auth.getCurrentUser();
+    this.setState({ user });
   }
 
+
   render() {
+    const { user } = this.state;
     return (
       <main className="container">
         <Sidebar user={this.state.user}/>
@@ -34,7 +36,10 @@ this.setState({user});
           <Route path="/login" component={LoginForm}/>
           <Route path="/logout" component={Logout}/>
           <Route path="/movies/:id" component={MovieForm}/>
-          <Route path="/movies" component={Movies}/>
+          <Route
+            path="/movies"
+            render={props => <Movies {...props} user={this.state.user} />}
+          />
           <Route path="/customers" component={Customers}/>
           <Route path="/rentals" exact component={Rentals}/>
           <Route path="/not-found" component={NotFound}/>
