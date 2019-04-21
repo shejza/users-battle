@@ -1,44 +1,52 @@
 import React, {Component} from 'react';
-import './App.css';
+import {Route, Switch, Redirect} from 'react-router-dom';
+import {ToastContainer} from 'react-toastify';
+
+import Movies from "./components/Movies";
+import Sidebar from "./components/Sidebar";
 import Customers from "./components/Customer";
 import Rentals from "./components/Rentals";
-import Movies from "./components/Movies";
-import {Route, Switch, Redirect} from 'react-router-dom';
-import Sidebar from "./components/Sidebar";
+import Logout from "./components/logout";
 import NotFound from "./notfound";
 import MovieForm from "./components/movieForm";
 import LoginForm from "./components/loginForm";
 import RegisterForm from "./components/registerForm";
-import {ToastContainer} from 'react-toastify';
+import ProtectedRoute from "./components/common/protectedRoute";
+
+import auth from "./services/authService";
+
 
 import 'react-toastify/dist/ReactToastify.css';
-import MoviesForm from "./components/movieForm";
-import Logout from "./components/logout";
-import auth from "./services/authService";
+import './App.css';
 
 class App extends Component {
   state = {};
 
   componentDidMount() {
+
     const user = auth.getCurrentUser();
+    console.log('asdasd state' + auth);
     this.setState({ user });
+
   }
 
 
   render() {
-    const { user } = this.state;
+ const {user} = this.state;
+    console.log('shej state' + auth);
     return (
       <main className="container">
-        <Sidebar user={this.state.user}/>
+        <Sidebar user={user}/>
         <ToastContainer/>
         <Switch>
           <Route path="/register" component={RegisterForm}/>
           <Route path="/login" component={LoginForm}/>
           <Route path="/logout" component={Logout}/>
-          <Route path="/movies/:id" component={MovieForm}/>
+          <ProtectedRoute path="/movies/:id"
+                 component={MovieForm}/>
           <Route
             path="/movies"
-            render={props => <Movies {...props} user={this.state.user} />}
+            render={props => <Movies {...props} user={user} />}
           />
           <Route path="/customers" component={Customers}/>
           <Route path="/rentals" exact component={Rentals}/>

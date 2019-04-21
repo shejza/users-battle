@@ -17,7 +17,7 @@ if(pagesCount === 1) return null;
         <ul className="pagination">
 
           {pages.map(page =>
-            <li className={page=== currentPage ? "page-item active": "page-item"} key={page}><a className="page-link" href="#" onClick={() => onPageChange (page)}>{page}</a></li>
+            <li className={page=== currentPage ? "page-item active": "page-item"} key={page}><a className="page-link"  onClick={() => onPageChange (page)}>{page}</a></li>
           )}
 
 

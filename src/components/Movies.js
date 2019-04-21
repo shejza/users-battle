@@ -11,6 +11,7 @@ import _ from 'lodash';
 import '../App.css';
 import SearchBox from "./common/search";
 import {Toast as toast} from "react-toastify";
+import auth from "../services/authService";
 
 
 class Movies extends Component {
@@ -27,7 +28,7 @@ class Movies extends Component {
 
 
   async componentDidMount() {
-    console.log(await getGenres());
+
     const {data} = await  getGenres();
 
     const genres = [{_id: '', name: 'All Genres'}, ...data];
@@ -40,6 +41,7 @@ class Movies extends Component {
     this.setState({
       movies: originalMovies.filter(m => m._id !== movie._id)
     });
+
 try {
   await deleteMovie(movie._id);
 }
@@ -113,11 +115,11 @@ catch (ex) {
       sortColumn,
       searchQuery
     } = this.state;
-
+console.log("all props" +  this.props);
     const { user } = this.props;
 
     const {totalCount, data: movies} = this.getPagedData();
-
+const useri = auth.getCurrentUser();
     return (
 
       <div>
@@ -130,7 +132,7 @@ catch (ex) {
                        onFilterChange={this.handleFlterChange}/>
           </div>
           <div className="col-md-8">
-            {user && (
+            {useri && (
               <Link
                 to="/movies/new"
                 className="btn btn-primary"

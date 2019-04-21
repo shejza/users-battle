@@ -9,6 +9,7 @@ import App from "./App";
 import logger from "./services/logService";
 logger.init();
 
+console.log(process.env);
 ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
