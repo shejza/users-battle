@@ -16,3 +16,43 @@ code {
 .clickable {
   cursor: pointer;
 }
+
+.languagess {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+
+
+}
+.languagess li {
+  margin: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+}
+
+.m-b-30 {
+  margin-bottom: 30px;
+}
+.popular-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.popular-item {
+  margin:20px;
+  text-align:center;
+}
+.space-list-items {
+  margin-bottom: 7px;
+}
+.avatar {
+  width:150px;
+  border-radius:50%;
+}
+.popular-rank {
+  font-size: 20px;
+  margin: 10px;
+}
