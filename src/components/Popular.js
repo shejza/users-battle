@@ -24,7 +24,7 @@ class Popular extends Component {
       selectedLanguage: lang,
       data: datas
     });
-    
+
     await this.populateRepos(lang);
   }
 
