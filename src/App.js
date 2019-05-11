@@ -9,6 +9,7 @@ import Battle from "./components/Battle";
 import Home from "./components/Home";
 import Redirect from "react-router-dom/es/Redirect";
 import NotFound from "./notfound";
+import Results from "./components/Results";
 
 class App extends Component {
 
@@ -23,6 +24,7 @@ class App extends Component {
         <Switch>
           <Route path="/popular" component={Popular}/>
           <Route path="/battle" exact component={Battle}/>
+          <Route path="/battle/results"  component={Results}/>
           <Route path="/" exact component={Home}/>
           <Route path="/not-found" component={NotFound}/>
           <Redirect to="/not-found"/>

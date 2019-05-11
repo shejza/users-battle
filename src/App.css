@@ -32,6 +32,9 @@
   }
 }
 
+.container {
+  margin-top: 40px;
+}
 .column {
   display: flex;
   flex-direction:column;
