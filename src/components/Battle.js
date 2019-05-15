@@ -1,22 +1,10 @@
 import React, {Component} from 'react';
 import Link from "react-router-dom/es/Link";
+import PlayerPreview from './PlayerPreview';
 
 var PropTypes = require('prop-types');
 
-function PlayerPreview(props) {
-  return (
-    <div>
-      <div className="column">
-        <img src={props.avatar} alt={props.username} className="avatar"/>
-        <h2 className="username">@{props.username}</h2>
 
-      <button className="reset btn btn btn-warning" onClick={props.onReset.bind(null, props.id)}>
-        Reset
-      </button>
-      </div>
-    </div>
-  );
-}
 
 class PlayerInput extends React.Component {
   constructor(props) {
@@ -111,9 +99,12 @@ class Battle extends React.Component {
             <PlayerPreview
               avatar={playerOneImage}
               username={playerOneName}
-              onReset={this.handleReset}
               id="playerOne"
-            />
+            >
+             <button className="reset btn btn btn-warning" onClick={this.handleReset.bind(null, 'playerOne')}>
+          Reset
+        </button>
+            </PlayerPreview>
           )}
 
           {!playerTwoName && <PlayerInput id='playerTwo' label='Player Two' onSubmit={this.handleSubmit}/>}
@@ -121,15 +112,19 @@ class Battle extends React.Component {
             <PlayerPreview
               avatar={playerTwoImage}
               username={playerTwoName}
-              onReset={this.handleReset}
+             
               id="playerTwo"
-            />
+            >
+              <button className="reset btn btn btn-warning" onClick={this.handleReset.bind(null, 'playerTwo')}>
+          Reset
+        </button>
+            </PlayerPreview>
           )}
 
         </div>
         <div className="row">
           {playerOneImage && playerTwoImage &&
-          <Link className='btn btn-success' to={{pathname: match.url + '/results', search: '?playerOneName=' + playerOneName + 'playerTwoName=' + playerTwoName}}>Battle</Link>}</div>
+          <Link className='btn btn-success' to={{pathname: match.url + '/results', search: '?playerOneName=' + playerOneName + '&playerTwoName=' + playerTwoName}}>Battle</Link>}</div>
       </div>
     );
   }

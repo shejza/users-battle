@@ -64,3 +64,9 @@
   display:flex;
   justify-content: space-around;
 }
+.loader {
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  list-style: none;
+}
