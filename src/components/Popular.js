@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {getLanguages, getPopularRepos} from "../services/popularRepos";
+import Loading from './Loading';
 
 class Popular extends Component {
 
@@ -7,7 +8,7 @@ class Popular extends Component {
     super(props);
     this.state = {
       selectedLanguage: 'All',
-      data: [],
+      data: null,
     };
 
   }
@@ -50,6 +51,7 @@ render()
   console.log(data);
   return (
     <div>
+   
       <ul className="languagess">
 
         {
@@ -60,16 +62,19 @@ render()
           })
         }
       </ul>
-
+      {//don't call it until repos are loaded
+        !this.state.data ? (
+          <Loading />
+        ) : (
       <ul className="popular-list">
-
-        {
+  
+      {
           data.map((repo, index) => {
             return (
-              <li className="popular-item">
+              <li className="popular-item" key={index}> 
                 <div className="popular-rank"># {index + 1}</div>
                 <ul lang="space-list-items">
-                  <li>
+                  <li >
                     <img src={repo.owner.avatar_url} className="avatar"/></li>
                   <li><a href={repo.html_url}>{repo.name}</a></li>
                   <li>@{repo.owner.login}</li>
@@ -79,8 +84,9 @@ render()
 
             )
           })
-        }
+        } 
       </ul>
+         ) }
 
     </div>
   );
